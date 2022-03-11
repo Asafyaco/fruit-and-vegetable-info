@@ -10,7 +10,7 @@ export default class Items extends React.Component {
         {
           name: "Apple",
           img: "https://images.heb.com/is/image/HEBGrocery/prd-medium/001558019.jpg",
-          vitaminCAmount: 4.6,
+          vitaminCAmount: 4,
         },
         {
           name: "Orange",
