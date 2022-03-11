@@ -15,12 +15,12 @@ export default class Items extends React.Component {
         {
           name: "Orange",
           img: "https://i0.wp.com/www.baqala.store/wp-content/uploads/2021/03/orange.jpg?fit=500%2C500&ssl=1",
-          vitaminCAmount: 53.2,
+          vitaminCAmount: 53,
         },
         {
           name: "Banana",
-          img: "https://images.heb.com/is/image/HEBGrocery/prd-medium/001558019.jpg",
-          vitaminCAmount: 8.7,
+          img: "https://www.cppng.com/file/download/2020-06/35116-6-banana-bunch.png",
+          vitaminCAmount: 8,
         },
         {
           name: "Avocado",
@@ -30,7 +30,7 @@ export default class Items extends React.Component {
         {
           name: "Coconut",
           img: "https://4.imimg.com/data4/YT/DI/MY-12878195/fresh-coconut-500x500.jpg",
-          vitaminCAmount: 3.3,
+          vitaminCAmount: 3,
         },
         {
           name: "Cherry",
@@ -45,12 +45,12 @@ export default class Items extends React.Component {
         {
           name: "Pepper",
           img: "https://topseedsinternational.com/wp-content/uploads/2020/01/ARNON_141_studio-6-2-scaled-500x500.jpg",
-          vitaminCAmount: 143.7,
+          vitaminCAmount: 143,
         },
         {
           name: "Tomato",
           img: "https://www.freepnglogos.com/uploads/tomato-png/tomato-puree-manufacturer-and-supplier-lemonconcentrate-3.png",
-          vitaminCAmount: 13.7,
+          vitaminCAmount: 13,
         },
       ],
       sum: 0,
@@ -60,16 +60,16 @@ export default class Items extends React.Component {
   OneItemSelected = (selectedItem) => {
     let total = this.state.sum;
     total = total + selectedItem;
-    Math.round(total);
-    console.log(Math.round(total));
+    // Math.round(total);
+    // console.log(Math.round(total));
     this.setState({ sum: total });
   };
 
   OneItemUnSelected = (selectedItem) => {
     let total = this.state.sum;
     total = total - selectedItem;
-    Math.round(total);
-    console.log(Math.round(total));
+    // Math.round(total);
+    // console.log(Math.round(total));
     this.setState({ sum: total });
   };
 
@@ -77,7 +77,13 @@ export default class Items extends React.Component {
     return (
       <>
         <h1>My Fruits & Vegetables info</h1>
-        <h2>The Total Of Vitamin C is : {Math.round(this.state.sum)}</h2>
+        <h2>The Total Of Vitamin C is : {this.state.sum}</h2>
+
+        <div className="Credits">
+          <h6 style={{ textAlign: "left", margin: 0, paddingLeft: 15 }}>
+            Created by Asaf Yacobovich & Ariel Hillel
+          </h6>
+        </div>
         <div className="items">
           {this.state.items.map((item) => {
             return (
